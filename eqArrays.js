@@ -16,8 +16,3 @@ const eqArrays = function(arrOne, arrTwo) {
 };
 eqArrays([1, 2, 3], [1, 2, 8]);
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-
-//test code
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-//assertArraysEqual([1,2], [3,4])
