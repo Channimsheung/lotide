@@ -7,6 +7,17 @@ const eqArrays = function(arrOne, arrTwo) {
   return true;
 };
 
+const assertArraysEqual = function(result, array) {
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] !== array[i]) {
+      console.log(`This is false`);
+      break;
+    } else {
+      console.log(`This is true`);
+    }
+  }
+};
+
 const without = function(numList, removeItem) {
   let result = [];
   for (let i = 0; i < numList.length; i++) {
@@ -25,11 +36,5 @@ const without = function(numList, removeItem) {
 
 without(["1", 2, 3, 4], ["1", "2", 1]);
 
-const assertArraysEqual = function(result, array) {
-  if (result === array) {
-    console.log(`Assertion Passed: True`);
-  } else {
-    console.log(`Assertion Failed: False`);
-  }
-};
-assertArraysEqual(without(["1", 2, 3, 4], ["1", "2", 1]));
+assertArraysEqual(without(["1", 2, 3, 4], ["1", "2", 1]), [2, 3, 4]);
+eqArrays(without(["1", 2, 3, 4], ["1", "2", 1]), [2, 3, 4]);
