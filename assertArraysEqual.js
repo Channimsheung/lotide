@@ -1,21 +1,17 @@
-let output = true;
 const eqArrays = function(arrOne, arrTwo) {
-  if (
-    arrOne[0] === arrTwo[0] &&
-    arrOne[1] === arrTwo[1] &&
-    arrOne[2] === arrTwo[2]
-  ) {
-    return output;
-  } else {
-    return !output;
+  for (let i = 0; i < arrOne.length; i++) {
+    if (arrOne[i] !== arrTwo[i]) {
+      return false;
+    }
   }
+  return true;
 };
 
 const assertArraysEqual = function(arrOne, arrTwo) {
-  if (eqArrays(arrOne, arrTwo) === true) {
-    return true;
+  if (eqArrays(arrOne, arrTwo)) {
+    console.log(`Assertion Passed: True`);
   } else {
-    return false;
+    console.log(`Assertion Failed: False`);
   }
 };
 

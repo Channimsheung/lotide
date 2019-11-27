@@ -1,31 +1,23 @@
-let output = true;
-const assertEqual = function(output, expected) {
-  if (expected === output) {
-    return true;
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`This is true`);
   } else {
-    return false;
+    console.log(`This is false`);
   }
 };
 
 const eqArrays = function(arrOne, arrTwo) {
-  if (
-    arrOne[0] === arrTwo[0] &&
-    arrOne[1] === arrTwo[1] &&
-    arrOne[2] === arrTwo[2]
-  ) {
-    return output;
-  } else {
-    return !output;
+  for (let i = 0; i < arrOne.length; i++) {
+    if (arrOne[i] !== arrTwo[i]) {
+      return false;
+    }
   }
+  return true;
 };
+eqArrays([1, 2, 3], [1, 2, 8]);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 
 //test code
-assertEqual("lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
 
-eqArrays([1, 2, 3], [1, 2, 3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]); // => false
-
-eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+//assertArraysEqual([1,2], [3,4])

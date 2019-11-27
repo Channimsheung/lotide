@@ -1,19 +1,19 @@
-let arrayOfNum = [];
-const assertEqual = function(actual, expected) {
-  if (arrayOfNum[0] === expected) {
-    return true;
-  } else if (arrayOfNum[0] !== expected) {
-    return false;
+const assertEqual = function(newArray, expected) {
+  for (let i = 0; i < newArray.length; i++) {
+    if (newArray[i] !== expected[i]) {
+      console.log(`This is false`);
+      break;
+    } else {
+      console.log(`This is true`);
+    }
   }
 };
 
 const tail = function(arrayOfNum) {
-  return arrayOfNum.slice(1);
+  let newArray = [];
+  newArray.push(arrayOfNum.slice(1));
+  return newArray[0];
 };
 
-let original = [8, 9, 4, 10];
-let updated = tail(original);
-console.log(original);
-console.log(updated);
-
-assertEqual(original.length, 4);
+tail([3, 4, 5, 8]);
+assertEqual(tail([3, 4, 5, 8]), [4, 5, 8]);
