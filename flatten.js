@@ -22,6 +22,8 @@ const flatten = function(array) {
   let merged = [].concat.apply([], array);
   return merged;
 };
-flatten([1, 2, [3, 4], 5, [6]]);
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+// flatten([1, 2, [3, 4], 5, [6]]);
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+// eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+
+module.exports = flatten;
