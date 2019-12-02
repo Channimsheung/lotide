@@ -11,4 +11,6 @@ const countOnly = function(sentence) {
   return objectOfLetters;
 };
 
-countOnly("lighthouse in the house");
+//countOnly("lighthouse in the house");
+
+module.exports = countLetters;

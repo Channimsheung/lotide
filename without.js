@@ -36,5 +36,7 @@ const without = function(numList, removeItem) {
 
 without(["1", 2, 3, 4], ["1", "2", 1]);
 
-assertArraysEqual(without(["1", 2, 3, 4], ["1", "2", 1]), [2, 3, 4]);
-eqArrays(without(["1", 2, 3, 4], ["1", "2", 1]), [2, 3, 4]);
+// assertArraysEqual(without(["1", 2, 3, 4], ["1", "2", 1]), [2, 3, 4]);
+// eqArrays(without(["1", 2, 3, 4], ["1", "2", 1]), [2, 3, 4]);
+
+module.exports = without;
